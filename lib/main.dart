@@ -8,6 +8,8 @@ void main() {
 }
 
 class HipsterzApp extends StatelessWidget {
+  const HipsterzApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CatalogScreen extends StatelessWidget {
+  const CatalogScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(
+          255, 128, 127, 125), // Light pastel background color
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(
+            255, 153, 155, 152), // Complementary AppBar color
         elevation: 0,
-        title: TextField(
+        title: const TextField(
           decoration: InputDecoration(
             hintText: 'Search for something',
             border: InputBorder.none,
@@ -48,12 +53,12 @@ class CatalogScreen extends StatelessWidget {
             height: 100,
             width: 100,
           ),
-          SizedBox(height: 10),
-          Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
-          SizedBox(height: 5),
+          const SizedBox(height: 10),
+          Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 5),
           Text(price,
               style:
-                  TextStyle(color: const Color.fromARGB(255, 122, 101, 107))),
+                  const TextStyle(color: Color.fromARGB(255, 122, 101, 107))),
         ],
       ),
     );
