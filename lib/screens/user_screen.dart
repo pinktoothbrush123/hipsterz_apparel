@@ -62,39 +62,79 @@ class UserCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
+      elevation: 8,
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15), // Rounded corners
+      ),
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // User's name
             Text(
               user['name'],
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal[700],
+              ),
             ),
-            SizedBox(height: 5),
-            Text("Username: ${user['username']}"),
-            SizedBox(height: 5),
-            Text("Email: ${user['email']}"),
-            SizedBox(height: 5),
-            Text("Phone: ${user['phone']}"),
-            SizedBox(height: 5),
-            Text("Website: ${user['website']}"),
-            SizedBox(height: 10),
+            SizedBox(height: 8),
+            // User's username
+            Text(
+              "Username: ${user['username']}",
+              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+            ),
+            SizedBox(height: 8),
+            // User's email
+            Text(
+              "Email: ${user['email']}",
+              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+            ),
+            SizedBox(height: 8),
+            // User's phone
+            Text(
+              "Phone: ${user['phone']}",
+              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+            ),
+            SizedBox(height: 8),
+            // User's website
+            Text(
+              "Website: ${user['website']}",
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.blueAccent,
+                decoration: TextDecoration.underline,
+              ),
+            ),
+            SizedBox(height: 12),
+            // Address section
             Text(
               "Address",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal[700],
+              ),
             ),
+            SizedBox(height: 8),
             Text("Street: ${user['address']['street']}"),
             Text("Suite: ${user['address']['suite']}"),
             Text("City: ${user['address']['city']}"),
             Text("Zipcode: ${user['address']['zipcode']}"),
-            SizedBox(height: 10),
+            SizedBox(height: 12),
+            // Company section
             Text(
               "Company",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal[700],
+              ),
             ),
+            SizedBox(height: 8),
             Text("Name: ${user['company']['name']}"),
             Text("Catch Phrase: ${user['company']['catchPhrase']}"),
             Text("BS: ${user['company']['bs']}"),
