@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:hipsterz_apparel/screens/catalog_screen.dart';
 import 'package:hipsterz_apparel/screens/login_screen.dart';
 import 'package:hipsterz_apparel/screens/signup_screen.dart';
+import 'package:hipsterz_apparel/screens/user_screen.dart';
 
 void main() {
-  runApp(HipsterzApp());
+  runApp(const HipsterzApp());
 }
 
 class HipsterzApp extends StatelessWidget {
@@ -16,9 +17,10 @@ class HipsterzApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => LoginScreen(),
-        '/catalog': (context) => CatalogScreen(),
-        '/signup': (context) => SignUpScreen(),
+        '/': (context) => const LoginScreen(),
+        '/catalog': (context) => const CatalogScreen(),
+        '/signup': (context) => const SignUpScreen(),
+        '/user': (context) => UserScreen(),
       },
     );
   }

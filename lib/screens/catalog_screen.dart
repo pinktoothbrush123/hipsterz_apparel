@@ -38,6 +38,13 @@ class CatalogScreen extends StatelessWidget {
                 ],
               ),
             ),
+            // Add the button here
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/user');
+              },
+              child: const Text('Go to User Screen'),
+            ),
           ],
         ),
       ),
